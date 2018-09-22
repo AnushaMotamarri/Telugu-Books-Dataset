@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 def pages():
     i=1
     for book in open("booklinks.txt",'r',encoding="utf-8"):
-        if(i>=96 and i<=195):
+        if(i>=1):
             file="book"+str(i)+".txt"
             print(i)
             f1=open(file,'w+',encoding="utf-8")
