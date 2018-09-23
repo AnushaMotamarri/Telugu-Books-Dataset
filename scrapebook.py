@@ -9,11 +9,14 @@ def scrape():
             url=page.strip()
             if(url!=""):
                 n_url+=1
-                resp=requests.get(url)
-                if resp.status_code==200:
-                    soup=BeautifulSoup(resp.text,'html.parser')
-                    filename="00"+'0'*(3-len(str(i)))+str(i)+'0'*(3-len(str(n_url)))+str(n_url)+".utf8"
-                    f=open("book_data/"+filename,'a+',encoding='utf_8')
-                    for paras in soup.findAll("p"):
-                        f.write(str(paras.get_text()))
+                filename="00"+'0'*(3-len(str(i)))+str(i)+'0'*(3-len(str(n_url)))+str(n_url)+".utf8"
+                if(os.path.isfile("book_data/"+filename)==False):
+                    print(str(i)+"-->"+str(n_url))
+                    resp=requests.get(url)
+                    if resp.status_code==200:
+                        soup=BeautifulSoup(resp.text,'html.parser')
+                   
+                        f=open("book_data/"+filename,'a+',encoding='utf_8')
+                        for paras in soup.findAll("p"):
+                            f.write(str(paras.get_text()))
 scrape()
