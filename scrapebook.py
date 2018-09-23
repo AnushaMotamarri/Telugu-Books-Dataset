@@ -3,7 +3,7 @@ import os,sys
 from bs4 import BeautifulSoup
 def scrape():
     os.mkdir("book_data")
-    for i in range(1,2):
+    for i in range(1,376):
         n_url=-1
         for page in open("book"+str(i)+".txt",'r'):
             url=page.strip()
