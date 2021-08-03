@@ -26,4 +26,4 @@ You should now be seeing utf8 files getting created in the `book_data` directory
 This Scraper is `website specific`. So, it does not work with other websites.
 
 ## Related works
-A similar work on Telugu Newspaper dataset can be found [here](https://github.com/AnushaMotamarri/Telugu-Books-Dataset)
+A similar work on Telugu Newspaper dataset can be found [here](https://github.com/AnushaMotamarri/Telugu-Newspaper-Article-Dataset)
